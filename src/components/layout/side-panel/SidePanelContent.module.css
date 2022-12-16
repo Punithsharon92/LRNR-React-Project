@@ -1,0 +1,46 @@
+.side-panel-content,
+.side-panel-child ul,
+li {
+  padding-left: 10px;
+  padding-top: 2px;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-child__addIcon {
+  float: right;
+  padding-right: 20px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.side-panel-child__arrowIcon {
+  padding-top: 10px;
+  cursor: pointer;
+}
+.side-panel__name {
+  padding: 0px 0px 15px 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.side-panel__name-active {
+  color: rgb(230, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+.sidepanellight {
+  color: rgb(116, 116, 116);
+  text-decoration: none;
+}
+.sidepaneldark {
+  color: rgb(116, 116, 116);
+  text-decoration: none;
+}
+
+.side-panel__name:hover {
+  opacity: 0.7;
+}
+.side-panel-child__addIcon:hover {
+  opacity: 0.6;
+}

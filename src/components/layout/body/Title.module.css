@@ -1,0 +1,29 @@
+.title {
+}
+.wrapper-title {
+  width: 100%;
+  /* border: 1px solid #ccc; */
+  cursor: text;
+}
+.editor-title {
+  font-size: 1.7rem;
+  padding: 0 50px;
+  box-shadow: 0px 1px 5px 0 #2e2e2e4b;
+  background-color: rgb(255, 255, 255, 0.07);
+  max-width: 770px;
+  max-height: 95px;
+  overflow: hidden;
+}
+.editor-title:hover {
+  border: 1px solid #ccc;
+}
+
+.toolbar-title {
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.473);
+}
+@media only screen and (min-width: 768px) {
+  .editor-title {
+    max-width: 100%;
+  }
+}

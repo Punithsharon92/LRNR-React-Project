@@ -1,0 +1,21 @@
+.body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 1.2% 10%;
+}
+.body-content button {
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(163, 163, 163, 0.5);
+  border: solid 0.5px rgb(156, 156, 156, 0.3);
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+}
+.body-content button:hover {
+  opacity: 0.8;
+}

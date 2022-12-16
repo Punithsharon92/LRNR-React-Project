@@ -1,0 +1,31 @@
+.team-invite {
+  padding: 30px;
+  text-align: center;
+  color: black;
+}
+.team-invite div {
+  padding: 10px 0;
+}
+.team-invite a {
+  cursor: pointer;
+  padding: 20px;
+  color: rgb(27, 26, 26);
+}
+.team-invite button h3 {
+  margin: 0;
+}
+.team-invite button {
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 0.5px rgb(156, 156, 156);
+  background-color: rgb(184, 184, 184);
+}
+.team-invite a:hover {
+  opacity: 0.8;
+}
+.team-invite button:hover {
+  opacity: 0.7;
+}
