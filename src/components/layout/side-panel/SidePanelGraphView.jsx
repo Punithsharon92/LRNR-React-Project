@@ -9,6 +9,21 @@ const SidePanelGraphView = () => {
 
   const data = panelCtx.items.items;
 
+  const structuredata = {
+    name: "Parent",
+    children: [
+      {
+        name: "Child One",
+      },
+      {
+        name: "Child Two",
+      },
+    ],
+  };
+
+  console.log(structuredata);
+  console.log(data);
+
   return (
     <div>
       (

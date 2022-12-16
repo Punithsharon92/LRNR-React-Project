@@ -6,7 +6,7 @@ import styles from "./Content.module.css";
 
 const Content = (props) => {
   let _contentState = ContentState.createFromText(
-    "Click here to show editor's tab and enter your content"
+    "Click here to show editor's tab and enter text"
   );
   const raw = convertToRaw(_contentState);
   const [contentState, setContentState] = useState(raw); // ContentState RAW JS
