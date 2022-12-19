@@ -36,20 +36,17 @@ const sidePanelReducer = (state, action) => {
       // updating the state
       updatedItems = [...state.items];
       updatedItems[existingContainerIndex] = updatedItem;
-      console.log(updatedItem);
+
       return {
         items: updatedItems,
       };
     }
 
     case "ADD_LEAF": {
-   
-
       // getting the Main/Root container index
       const existingMainContainerIndex = state.items.findIndex(
         (container) => container.id === action.item.ancestorId
       );
-      
 
       // getting the Sub container index
       const existingSubContainerIndex = state.items[
@@ -58,7 +55,6 @@ const sidePanelReducer = (state, action) => {
         return subcontainer.id === action.item.parentId;
       });
 
-  
       const arrayElement =
         state.items[existingMainContainerIndex].children[
           existingSubContainerIndex
@@ -114,23 +110,14 @@ const sidePanelReducer = (state, action) => {
       const arrayElement =
         state.items[ancestorIndex].children[parentIndex].children[leafIndex];
 
-      console.log(arrayElement);
       let updatedItem;
       let updatedItems;
 
       // // Replaces old element of the array with new element updated with contents
       updatedItem = {
         ...arrayElement,
-        content: [...arrayElement.content, action.item.content],
+        content: [action.item.content],
       };
-
-      //checks duplicate element and removes(if dispatch runs twice).
-      const check = updatedItem.content.filter((content) => {
-        return content.id === action.item.content.id;
-      });
-      if (check.length === 2) {
-        updatedItem.content.pop();
-      }
 
       // updating the state
       updatedItems = [...state.items];
@@ -201,3 +188,4 @@ const SidePanelProvider = (props) => {
 };
 
 export default SidePanelProvider;
+
