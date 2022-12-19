@@ -43,28 +43,39 @@ const sidePanelReducer = (state, action) => {
     }
 
     case "ADD_LEAF": {
-      // Maps throught the arrays and gets the parent element.
-      let tempParentContainer = state.items.map((item) => {
-        return item.children.filter((itemChildren) => {
-          return itemChildren.id === action.item.parentId;
-        });
-      });
-      // filters through data in the above step and returns single array that will be parent element
-      const parentContainer = tempParentContainer.filter((item) => {
-        return item.length === 1;
-      });
+         // Maps throught the arrays and gets the parent element(when not passing ancestor id,This aproach is followed).
+
+      // let tempParentContainer = state.items.map((item) => {
+      //   return item.children.filter((itemChildren) => {
+      //     return itemChildren.id === action.item.parentId;
+      //   });
+      // });
+
+      // // filters through data in the above step and returns single array that will be parent element
+      // const parentContainer = tempParentContainer.filter((item) => {
+      //   return item.length === 1;
+      // });
 
       // getting the Main/Root container index
       const existingMainContainerIndex = state.items.findIndex(
-        (container) => container.id === parentContainer[0][0].parentId
+        (container) => container.id === action.item.ancestorId
       );
+      // const existingMainContainerIndex = state.items.findIndex(
+      //   (container) => container.id === parentContainer[0][0].parentId
+      // );
 
       // getting the Sub container index
       const existingSubContainerIndex = state.items[
         existingMainContainerIndex
       ].children.findIndex((subcontainer) => {
-        return subcontainer.id === parentContainer[0][0].id;
+        return subcontainer.id === action.item.parentId;
       });
+
+      // const existingSubContainerIndex = state.items[
+      //   existingMainContainerIndex
+      // ].children.findIndex((subcontainer) => {
+      //   return subcontainer.id === parentContainer[0][0].id;
+      // });
 
       const arrayElement =
         state.items[existingMainContainerIndex].children[
