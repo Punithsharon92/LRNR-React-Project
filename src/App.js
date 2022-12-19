@@ -120,18 +120,7 @@ function App(props) {
                 }
               />
               <Route />
-              <Route
-                path='/*'
-                element={
-                  isSidePanelOpen && (
-                    <SidePanelMain
-                      toggleSidePanelHandler={toggleSidePanelHandler}
-                    />
-                  )
-                }
-              />
-
-              <Route />
+              
             </Routes>
             <BodyContent />
           </div>
